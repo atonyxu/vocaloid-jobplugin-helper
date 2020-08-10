@@ -2,7 +2,7 @@
 	"name": "vocaloid-jobplugin-helper",
 	"displayName": "VOCALOID Job Plugin Helper",
 	"description": "VOCALOID Job Plugin 插件编写助手",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"keywords": [
 		"V家",
 		"插件",
@@ -10,10 +10,11 @@
 		"jobplugin",
 		"job plugin"
 	],
+	"preview": true,
 	"publisher": "zhengyiling",
 	"icon": "images/vcoding.png",
 	"engines": {
-		"vscode": "^1.47.0"
+		"vscode": "^1.27.0"
 	},
 	"categories": [
 		"Other"
@@ -66,7 +67,7 @@
 		"test": "node ./test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.47.0",
+		"@types/vscode": "^1.27.0",
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^7.0.2",
 		"@types/node": "^13.11.0",

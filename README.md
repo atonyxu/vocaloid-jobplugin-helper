@@ -2,7 +2,7 @@
 <center><img src="images/vcoding.png"></center>
 <br>
 <center><h1>VOCALOID插件编写助手</h1></center>
-Version. 0.1.0 Preview
+Version. 0.1.1 Preview
 <br>
 一款能够为VOCALOID Job Plugin插件编写提供辅助的VSCode插件
 <br>
@@ -21,7 +21,8 @@ Version. 0.1.0 Preview
 * 插件提供的文档是在Google上面找到的疑似机翻文档，但是总比日文版看的清楚就放进去了，目前也没有人翻译成中文。
 
 ## 提供的模板代码
-* NoteEditTemplate(音符编辑模板)
+### NoteEditTemplate(音符编辑模板)
+
 ```lua
 VSSeekToBeginNote()
 idx = 1
@@ -46,14 +47,16 @@ for idx = 1, noteCount do
 end
 ```
 
-* ControlEditTemplate(参数编辑模板)
+### ControlEditTemplate(参数编辑模板)
+
 ```lua
 for posTick = beginPosTick, endPosTick do
     -- 在posTick位置编辑参数
 end
 ```
 
-* NewDialogTemplate(新建对话框模板)
+### NewDialogTemplate(新建对话框模板)
+
 ```lua
 VSDlgSetDialogTitle('title')
 
@@ -77,7 +80,8 @@ if ((dlgStatus ~= 1) and (dlgStatus ~= 2)) then
 end
 ```
 
-* NewDialogFieldTemplate(新建对话框选项模板)
+### NewDialogFieldTemplate(新建对话框选项模板)
+
 ```lua
 field.name = ''
 field.caption = ''
@@ -86,7 +90,8 @@ field.type = 0
 dlgStatus = VSDlgAddField(field)
 ```
 
-* function manifest(插件描述模板)
+### function manifest(插件描述模板)
+
 ```lua
 function manifest()
     myManifest = {
@@ -101,7 +106,8 @@ function manifest()
 end
 ```
 
-* function main(插件主函数模板)
+### function main(插件主函数模板)
+
 ```lua
 function main(processParam, envParam)
     local beginPosTick = processParam.beginPosTick
