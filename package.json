@@ -1,0 +1,77 @@
+{
+	"name": "vocaloid-jobplugin-helper",
+	"displayName": "VOCALOID Job Plugin Helper",
+	"description": "VOCALOID Job Plugin 编写助手",
+	"version": "0.1.0",
+	"keywords": [
+		"vocaloid",
+		"jobplugin",
+		"job plugin"
+	],
+	"publisher": "zhengyiling",
+	"icon": "images/vcoding.png",
+	"engines": {
+		"vscode": "^1.27.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:lua"
+	],
+	"main": "./src/extension",
+	"contributes": {
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorFocus && resourceLangId == lua",
+					"command": "extension.demo.showWelcome",
+					"group": "z_commands"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "VOCALOID Job Plugin Helper",
+			"properties": {
+				"vscodePluginDemo.showTip": {
+					"type": "boolean",
+					"default": false,
+					"description": "是否运行时打开VOCALOID Job Plugin API文档"
+				}
+			}
+		},
+		"snippets": [
+			{
+				"language": "lua",
+				"path": "./snippets/lua.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "vocaloid-jobplugin-helper.helloWorld",
+				"title": "Hello World"
+			},
+			{
+				"command": "extension.demo.showWelcome",
+				"title": "打开VOCALOID Job Plugin API文档"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.47.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.2",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	}
+}

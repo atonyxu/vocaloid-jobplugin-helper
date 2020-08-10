@@ -1,0 +1,358 @@
+{
+    "VSGetControlAt": {
+        "prefix": "VSGetControlAt",
+        "body": "VSGetControlAt(\"${1:controlType}\", ${2:posTick})",
+        "description": "获取某位置参数值"
+    },
+    "VSUpdateControlAt": {
+        "prefix": "VSUpdateControlAt",
+        "body": "VSUpdateControlAt(\"${1:controlType}\", ${2:Value}, ${3:posTick})",
+        "description": "修改某位置参数值"
+    },
+    "VSSeekToBeginControl": {
+        "prefix": "VSSeekToBeginControl",
+        "body": "VSSeekToBeginControl(\"${1:controlType}\")",
+        "description": "前往此序列第一个参数值"
+    },
+    "VSGetNextControl": {
+        "prefix": "VSGetNextControl",
+        "body": "VSGetNextControl(\"${1:controlType}\")",
+        "description": "前往此序列下一个参数值"
+    },
+    "VSUpdateControl": {
+        "prefix": "VSUpdateControl",
+        "body": "VSUpdateControl(${1:Control})",
+        "description": "修改参数值"
+    },
+    "VSInsertControl": {
+        "prefix": "VSInsertControl",
+        "body": "VSInsertControl(${1:Control})",
+        "description": "添加参数值"
+    },
+    "VSRemoveControl": {
+        "prefix": "VSRemoveControl",
+        "body": "VSRemoveControl(${1:controlType})",
+        "description": "删除参数值"
+    },
+    "VSGetDefaultControlValue": {
+        "prefix": "VSGetDefaultControlValue",
+        "body": "VSGetDefaultControlValue(\"${1:controlType}\")",
+        "description": "获取参数类型默认值"
+    },
+    "VSSeekToBeginNote": {
+        "prefix": "VSSeekToBeginNote",
+        "body": "VSSeekToBeginNote()",
+        "description": "前往此序列第一个音符"
+    },
+    "VSGetNextNote": {
+        "prefix": "VSGetNextNote",
+        "body": "VSGetNextNote()",
+        "description": "获取下一个音符(基础型)"
+    },
+    "VSGetNextNoteEx": {
+        "prefix": "VSGetNextNoteEx",
+        "body": "VSGetNextNoteEx()",
+        "description": "获取下一个音符(拓展型)"
+    },
+    "VSUpdateNote": {
+        "prefix": "VSUpdateNote",
+        "body": "VSUpdateNote(${1:Note})",
+        "description": "修改音符(基础型)"
+    },
+    "VSUpdateNoteEx": {
+        "prefix": "VSUpdateNoteEx",
+        "body": "VSUpdateNoteEx(${1:NoteEx})",
+        "description": "修改音符(拓展型)"
+    },
+    "VSInsertNote": {
+        "prefix": "VSInsertNote",
+        "body": "VSInsertNote(${1:Note})",
+        "description": "添加音符(基础型)"
+    },
+    "VSInsertNoteEx": {
+        "prefix": "VSInsertNoteEx",
+        "body": "VSInsertNoteEx(${1:NoteEx})",
+        "description": "添加音符(拓展型)"
+    },
+    "VSRemoveNote": {
+        "prefix": "VSRemoveNote",
+        "body": "VSRemoveNote(${1:note})",
+        "description": "删除音符"
+    },
+    "VSDlgSetDialogTitle": {
+        "prefix": "VSDlgSetDialogTitle",
+        "body": "VSDlgSetDialogTitle(${1:Title})",
+        "description": "设置对话框标题"
+    },
+    "VSDlgAddField": {
+        "prefix": "VSDlgAddField",
+        "body": "VSDlgAddField(${1:field})",
+        "description": "对话框添加选项"
+    },
+    "VSDlgGetIntValue": {
+        "prefix": "VSDlgGetIntValue",
+        "body": "VSDlgGetIntValue(${1:fieldName})",
+        "description": "获取选项整数值"
+    },
+    "VSDlgGetBoolValue": {
+        "prefix": "VSDlgGetBoolValue",
+        "body": "VSDlgGetBoolValue(${1:fieldName})",
+        "description": "获取选项布尔值"
+    },
+    "VSDlgGetFloatValue": {
+        "prefix": "VSDlgGetFloatValue",
+        "body": "VSDlgGetFloatValue(${1:fieldName})",
+        "description": "获取选项浮点值"
+    },
+    "VSDlgGetStringValue": {
+        "prefix": "VSDlgGetStringValue",
+        "body": "VSDlgGetStringValue(${1:fieldName})",
+        "description": "获取选项字符串值"
+    },
+    "VSDlgDoModal": {
+        "prefix": "VSDlgDoModal",
+        "body": "VSDlgDoModal()",
+        "description": "显示对话框"
+    },
+    "VSMessageBox": {
+        "prefix": "VSMessageBox",
+        "body": "VSMessageBox(\"${1:Message}\", 0)",
+        "description": "弹出提示信息"
+    },
+    "VSGetTempoAt": {
+        "prefix": "VSGetTempoAt",
+        "body": "VSGetTempoAt(${1:posTick})",
+        "description": "获取某位置BPM值"
+    },
+    "AddNewField": {
+        "prefix": "addNewField",
+        "body": "VSDlgAddField({name = \"${1:选项名称}\", caption = \"${2:选项显示内容}\", initialVal = ${3:value}, type = ${4:fieldTypeNum}})",
+        "description": "对话框添加选项"
+    },
+    "AddPluginInfo": {
+        "prefix": "function manifest",
+        "body": [
+            "function manifest()",
+            "    myManifest = {",
+            "        name = \"${1:JobPluginName}\",",
+            "        comment = \"${2:JobPluginDescription}\",",
+            "        author = \"${3:AuthorName}\",",
+            "        pluginID = \"{${4:RandomUUID}}\",",
+            "        pluginVersion = \"1.0.0.1\",",
+            "        apiVersion = \"3.0.0.1\",",
+            "    }",
+            "    return myManifest",
+            "end"
+        ],
+        "description": "创建插件描述信息"
+    },
+    "AddMainFunction": {
+        "prefix": "function main",
+        "body": [
+            "function main(processParam, envParam)",
+            "    local beginPosTick = processParam.beginPosTick",
+            "    local endPosTick = processParam.endPosTick",
+            "    local songPosTick = processParam.songPosTick",
+            "",
+            "    local scriptDir = envParam.scriptDir",
+            "    local scriptName = envParam.scriptName",
+            "    local tempDir = envParam.tempDir",
+            "",
+            "    -- statement",
+            "    return 0",
+            "end"
+        ],
+        "description": "添加入口函数"
+    },
+    "NodeEditTemplate": {
+        "prefix": "NodeEditTemplate",
+        "body": [
+            "local noteEx = {}",
+            "local noteExList = {}",
+            "local noteCount",
+            "local retCode",
+            "local idx",
+            "",
+            "VSSeekToBeginNote()",
+            "idx = 1",
+            "retCode, noteEx = VSGetNextNoteEx()",
+            "while (retCode == 1) do",
+            "    noteExList[idx] = noteEx",
+            "    retCode, noteEx = VSGetNextNoteEx()",
+            "    idx = idx + 1",
+            "end",
+            "",
+            "noteCount = table.getn(noteExList)",
+            "if (noteCount == 0) then",
+            "    VSMessageBox(\"你需要选择一个音符\", 0)",
+            "    return 0",
+            "end",
+            "",
+            "for idx = 1, noteCount do",
+            "    local note = noteExList[idx]",
+            "    if (note.posTick >= beginPosTick and note.posTick + note.durTick <= endPosTick) then",
+            "       -- 选中区域的音符操作",
+            "    end",
+            "end"
+        ],
+        "description": "音符编辑模板代码"
+    },
+    "ControlEditTemplate": {
+        "prefix": "ControlEditTemplate",
+        "body": [
+            "for posTick = beginPosTick, endPosTick do",
+            "    -- 在posTick位置编辑参数",
+            "end"
+        ],
+        "description": "参数编辑模板代码"
+    },
+    "NewDialogTemplate": {
+        "prefix": "NewDialogTemplate",
+        "body": [
+            "VSDlgSetDialogTitle('${1:title}')",
+            "",
+            "local dlgStatus",
+            "local field = {}",
+            "",
+            "field.name = '${2:}'",
+            "field.caption = '${3:}'",
+            "field.initialVal = '${4:}'",
+            "field.type = ${5:0}",
+            "dlgStatus = VSDlgAddField(field)",
+            "",
+            "-- 继续在此处添加对话框选项(模板代码)",
+            "",
+            "dlgStatus = VSDlgDoModal()",
+            "if (dlgStatus == 2) then",
+            "    return 0",
+            "end",
+            "if ((dlgStatus ~= 1) and (dlgStatus ~= 2)) then",
+            "    return 1",
+            "end"
+        ],
+        "description": "创建对话框模板代码"
+    },
+    "NewDialogFieldTemplate": {
+        "prefix": "NewDialogFieldTemplate",
+        "body": [
+            "field.name = '${1:}'",
+            "field.caption = '${2:}'",
+            "field.initialVal = '${3:}'",
+            "field.type = ${4:0}",
+            "dlgStatus = VSDlgAddField(field)"
+        ],
+        "description": "添加对话框选项模板代码"
+    },
+    "CopyNoteExFunction": {
+        "prefix": "CopyNoteExFunction",
+        "body": [
+            "function copyNoteEx(note_ex_src)",
+            "    local note_ex_new = {}",
+            "    --Normal Note Properties",
+            "    note_ex_new.posTick = note_ex_src.posTick",
+            "    note_ex_new.durTick = note_ex_src.durTick",
+            "    note_ex_new.noteNum = note_ex_src.noteNum",
+            "    note_ex_new.velocity = note_ex_src.velocity",
+            "    note_ex_new.phonemes = note_ex_src.phonemes",
+            "    note_ex_new.lyric = note_ex_src.lyric",
+            "    --Extended Note Properties",
+            "    note_ex_new.bendDepth = note_ex_src.bendDepth",
+            "    note_ex_new.bendLength = note_ex_src.bendLength",
+            "    note_ex_new.risePort = note_ex_src.risePort",
+            "    note_ex_new.fallPort = note_ex_src.fallPort",
+            "    note_ex_new.decay = note_ex_src.decay",
+            "    note_ex_new.accent = note_ex_src.accent",
+            "    note_ex_new.opening = note_ex_src.opening",
+            "    note_ex_new.vibratoLength = note_ex_src.vibratoLength",
+            "    note_ex_new.vibratoType = note_ex_src.vibratoType",
+            "    return note_ex_new",
+            "end"
+        ],
+        "description": "复制音符(拓展型)函数"
+    },
+    "VSSeekToBeginTempo": {
+        "prefix": "VSSeekToBeginTempo",
+        "body": "VSSeekToBeginTempo()",
+        "description": "前往序列第一个BPM"
+    },
+    "VSSeekToBeginTimeSig": {
+        "prefix": "VSSeekToBeginTimeSig",
+        "body": "VSSeekToBeginTimeSig()",
+        "description": "前往序列第一个拍子记号"
+    },
+    "VSGetNextTempo": {
+        "prefix": "VSGetNextTempo",
+        "body": "VSGetNextTempo()",
+        "description": "获取下一个BPM"
+    },
+    "VSGetNextTimeSig": {
+        "prefix": "VSGetNextTimeSig",
+        "body": "VSGetNextTimeSig()",
+        "description": "获取下一个拍子记号"
+    },
+    "VSGetTimeSigAt": {
+        "prefix": "VSGetTimeSigAt",
+        "body": "VSGetTimeSigAt(${1:posTick})",
+        "description": "获取某位置拍子"
+    },
+    "VSGetSequenceName": {
+        "prefix": "VSGetSequenceName",
+        "body": "VSGetSequenceName()",
+        "description": "获取音轨名称"
+    },
+    "VSGetSequencePath": {
+        "prefix": "VSGetSequencePath",
+        "body": "VSGetSequencePath()",
+        "description": "获取音轨文件位置"
+    },
+    "VSGetResolution": {
+        "prefix": "VSGetResolution",
+        "body": "VSGetResolution()",
+        "description": "获取時間分解能"
+    },
+    "VSGetPreMeasure": {
+        "prefix": "VSGetPreMeasure",
+        "body": "VSGetPreMeasure()",
+        "description": ""
+    },
+    "VSGetPreMeasureInTick": {
+        "prefix": "VSGetPreMeasureInTick",
+        "body": "VSGetPreMeasureInTick()",
+        "description": ""
+    },
+    "VSGetMusicalPart": {
+        "prefix": "VSGetMusicalPart",
+        "body": "VSGetMusicalPart()",
+        "description": "获取当前的序列"
+    },
+    "VSUpdateMusicalPart": {
+        "prefix": "VSUpdateMusicalPart",
+        "body": "VSUpdateMusicalPart(${1:musicalPart})",
+        "description": "修改当前序列信息"
+    },
+    "VSGetMusicalPartSinger": {
+        "prefix": "VSGetMusicalPartSinger",
+        "body": "VSGetMusicalPartSinger()",
+        "description": "获取序列歌手信息"
+    },
+    "VSGetStereoWAVPart": {
+        "prefix": "VSGetStereoWAVPart",
+        "body": "VSGetStereoWAVPart()",
+        "description": "获取立体声音轨信息，即WAV(STEREO)音轨"
+    },
+    "VSSeekToBeginMonoWAVPart": {
+        "prefix": "VSSeekToBeginMonoWAVPart",
+        "body": "VSSeekToBeginMonoWAVPart()",
+        "description": "前往单声道音轨第一个序列，即WAV(Mono)音轨"
+    },
+    "VSGetNextMonoWAVPart": {
+        "prefix": "VSGetNextMonoWAVPart",
+        "body": "VSGetNextMonoWAVPart()",
+        "description": "获取下一个单声道音轨序列"
+    },
+    "VSGetAudioDeviceName": {
+        "prefix": "VSGetAudioDeviceName",
+        "body": "VSGetAudioDeviceName()",
+        "description": "获取音频设备名"
+    }
+}
