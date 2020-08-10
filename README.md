@@ -15,7 +15,8 @@ Version. 0.1.0 Preview
 5. 跳转定义（须在项目文件中增加所提供的doc文档）
 
 ## 使用/注意事项
-* 跳转定义需将此项目根目录下的`doc.zip`文件解压后，把`doc`文件夹放到你的项目根目录下
+* 跳转定义需将的`doc.zip`文件解压后，把`doc`文件夹放到你的项目根目录下
+[doc.zip下载](https://raw.githubusercontent.com/Xujiayang12/vocaloid-jobplugin-helper/master/doc.zip)
 * 在lua文件的编辑器右键就可以看到`打开VOCALOID Job Plugin文档`的选项
 * 插件提供的文档是在Google上面找到的疑似机翻文档，但是总比日文版看的清楚就放进去了，目前也没有人翻译成中文。
 
