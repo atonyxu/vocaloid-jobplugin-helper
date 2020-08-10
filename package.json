@@ -13,7 +13,7 @@
 	"publisher": "zhengyiling",
 	"icon": "images/vcoding.png",
 	"engines": {
-		"vscode": "^1.27.0"
+		"vscode": "^1.47.0"
 	},
 	"categories": [
 		"Other"
