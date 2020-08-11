@@ -1,0 +1,184 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "jobplugin",
+    "patterns": [
+        {
+            "include": "#keywords"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.VSDlgSetDialogTitle",
+                    "match": "VSDlgSetDialogTitle"
+                },
+                {
+                    "name": "keyword.control.VSDlgAddField",
+                    "match": "VSDlgAddField"
+                },
+                {
+                    "name": "keyword.control.VSDlgGetIntValue",
+                    "match": "VSDlgGetIntValue"
+                },
+                {
+                    "name": "keyword.control.VSDlgGetBoolValue",
+                    "match": "VSDlgGetBoolValue"
+                },
+                {
+                    "name": "keyword.control.VSDlgGetFloatValue",
+                    "match": "VSDlgGetFloatValue"
+                },
+                {
+                    "name": "keyword.control.VSDlgGetStringValue",
+                    "match": "VSDlgGetStringValue"
+                },
+                {
+                    "name": "keyword.control.VSDlgDoModal",
+                    "match": "VSDlgDoModal"
+                },
+                {
+                    "name": "keyword.control.VSMessageBox",
+                    "match": "VSMessageBox"
+                },
+                {
+                    "name": "keyword.control.VSGetSequenceName",
+                    "match": "VSGetSequenceName"
+                },
+                {
+                    "name": "keyword.control.VSGetSequencePath",
+                    "match": "VSGetSequencePath"
+                },
+                {
+                    "name": "keyword.control.VSGetResolution",
+                    "match": "VSGetResolution"
+                },
+                {
+                    "name": "keyword.control.VSGetPreMeasure",
+                    "match": "VSGetPreMeasure"
+                },
+                {
+                    "name": "keyword.control.VSGetPreMeasureInTick",
+                    "match": "VSGetPreMeasureInTick"
+                },
+                {
+                    "name": "keyword.control.VSSeekToBeginTempo",
+                    "match": "VSSeekToBeginTempo"
+                },
+                {
+                    "name": "keyword.control.VSGetNextTempo",
+                    "match": "VSGetNextTempo"
+                },
+                {
+                    "name": "keyword.control.VSSeekToBeginTimeSig",
+                    "match": "VSSeekToBeginTimeSig"
+                },
+                {
+                    "name": "keyword.control.VSGetNextTimeSig",
+                    "match": "VSGetNextTimeSig"
+                },
+                {
+                    "name": "keyword.control.VSGetTempoAt",
+                    "match": "VSGetTempoAt"
+                },
+                {
+                    "name": "keyword.control.VSGetTimeSigAt",
+                    "match": "VSGetTimeSigAt"
+                },
+                {
+                    "name": "keyword.control.VSGetMusicalPart",
+                    "match": "VSGetMusicalPart"
+                },
+                {
+                    "name": "keyword.control.VSUpdateMusicalPart",
+                    "match": "VSUpdateMusicalPart"
+                },
+                {
+                    "name": "keyword.control.VSGetMusicalPartSinger",
+                    "match": "VSGetMusicalPartSinger"
+                },
+                {
+                    "name": "keyword.control.VSSeekToBeginNote",
+                    "match": "VSSeekToBeginNote"
+                },
+                {
+                    "name": "keyword.control.VSGetNextNote",
+                    "match": "VSGetNextNote"
+                },
+                {
+                    "name": "keyword.control.VSGetNextNoteEx",
+                    "match": "VSGetNextNoteEx"
+                },
+                {
+                    "name": "keyword.control.VSUpdateNote",
+                    "match": "VSUpdateNote"
+                },
+                {
+                    "name": "keyword.control.VSUpdateNoteEx",
+                    "match": "VSUpdateNoteEx"
+                },
+                {
+                    "name": "keyword.control.VSInsertNote",
+                    "match": "VSInsertNote"
+                },
+                {
+                    "name": "keyword.control.VSInsertNoteEx",
+                    "match": "VSInsertNoteEx"
+                },
+                {
+                    "name": "keyword.control.VSRemoveNote",
+                    "match": "VSRemoveNote"
+                },
+                {
+                    "name": "keyword.control.VSGetControlAt",
+                    "match": "VSGetControlAt"
+                },
+                {
+                    "name": "keyword.control.VSUpdateControlAt",
+                    "match": "VSUpdateControlAt"
+                },
+                {
+                    "name": "keyword.control.VSSeekToBeginControl",
+                    "match": "VSSeekToBeginControl"
+                },
+                {
+                    "name": "keyword.control.VSGetNextControl",
+                    "match": "VSGetNextControl"
+                },
+                {
+                    "name": "keyword.control.VSUpdateControl",
+                    "match": "VSUpdateControl"
+                },
+                {
+                    "name": "keyword.control.VSInsertControl",
+                    "match": "VSInsertControl"
+                },
+                {
+                    "name": "keyword.control.VSRemoveControl",
+                    "match": "VSRemoveControl"
+                },
+                {
+                    "name": "keyword.control.VSGetDefaultControlValue",
+                    "match": "VSGetDefaultControlValue"
+                },
+                {
+                    "name": "keyword.control.VSSeekToBeginMonoWAVPart",
+                    "match": "VSSeekToBeginMonoWAVPart"
+                },
+                {
+                    "name": "keyword.control.VSGetNextMonoWAVPart",
+                    "match": "VSGetNextMonoWAVPart"
+                },
+                {
+                    "name": "keyword.control.VSGetStereoWAVPart",
+                    "match": "VSGetStereoWAVPart"
+                },
+                {
+                    "name": "keyword.control.VSGetAudioDeviceName",
+                    "match": "VSGetAudioDeviceName"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.lua"
+}

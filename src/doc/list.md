@@ -1,7 +1,3 @@
-# Job plug-in API list
-
-|API Name|Support API version|
-| --- | --- |
 | VSDlgSetDialogTitle|3.0.0.1 ~|
 | VSDlgAddField|3.0.0.1 ~|
 | VSDlgGetIntValue|3.0.0.1 ~|

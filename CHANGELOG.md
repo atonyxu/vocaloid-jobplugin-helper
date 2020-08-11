@@ -1,9 +1,5 @@
-# Change Log
+# 更新日志
 
-All notable changes to the "vocaloid-jobplugin-helper" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+1. 添加doc文档文件夹设置项
+2. 更新了跳转定义的文件位置
+3. 增加了音符和对话框选项的属性补全

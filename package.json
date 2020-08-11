@@ -2,7 +2,7 @@
 	"name": "vocaloid-jobplugin-helper",
 	"displayName": "VOCALOID Job Plugin Helper",
 	"description": "VOCALOID Job Plugin 插件编写助手",
-	"version": "0.1.1",
+	"version": "0.1.3",
 	"keywords": [
 		"V家",
 		"插件",
@@ -37,10 +37,15 @@
 			"type": "object",
 			"title": "VOCALOID Job Plugin Helper",
 			"properties": {
-				"vscodePluginDemo.showTip": {
+				"jobPlugin.showAPI": {
 					"type": "boolean",
 					"default": false,
 					"description": "是否运行时打开VOCALOID Job Plugin API文档"
+				},
+				"jobPlugin.docLocation": {
+					"type": "String",
+					"default": "",
+					"description": "doc文档目录(结尾不带斜杠) 如：c:/doc"
 				}
 			}
 		},

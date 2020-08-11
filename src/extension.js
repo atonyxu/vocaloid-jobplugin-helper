@@ -7,6 +7,7 @@ function activate(context) {
 	require('./jump-to-definition')(context); // 跳转到定义
 	require('./welcome')(context); // 欢迎提示
 	require('./hover')(context); // 悬停提示
+	require('./completion')(context); // 自动补全
 	context.subscriptions.push(disposable);
 }
 exports.activate = activate;

@@ -3,7 +3,6 @@ const path = require('path');
 const fs = require('fs');
 
 /**
- * 自动显示对应包的名称、版本号和许可协议
  * @param {*} document 
  * @param {*} position 
  * @param {*} token 
@@ -22,7 +21,6 @@ function provideHover(document, position, token) {
 }
 
 module.exports = function (context) {
-    // 注册鼠标悬停提示
     context.subscriptions.push(vscode.languages.registerHoverProvider('lua', {
         provideHover
     }));

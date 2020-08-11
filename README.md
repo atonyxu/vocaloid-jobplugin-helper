@@ -2,7 +2,7 @@
 <center><img src="images/vcoding.png"></center>
 <br>
 <center><h1>VOCALOID插件编写助手</h1></center>
-Version. 0.1.1 Preview
+Version. 0.1.3 Preview
 <br>
 一款能够为VOCALOID Job Plugin插件编写提供辅助的VSCode插件
 <br>
@@ -15,7 +15,8 @@ Version. 0.1.1 Preview
 5. 跳转定义（须在项目文件中增加所提供的doc文档）
 
 ## 使用/注意事项
-* 跳转定义需将的`doc.zip`文件解压后，把`doc`文件夹放到你的项目根目录下
+* 在输入`note`,`noteex`,`noteEx`,`note_ex`和`field`结尾的词组加`.`时可以自动属性补全
+* 跳转定义需将的`doc.zip`文件解压后，把`doc`文件夹放某处，并在设置中配置`doc`文件夹地址`jobPlugin.docLocation`,例如：`"jobPlugin.docLocation": "d:/doc"`
 [doc.zip下载](https://raw.githubusercontent.com/Xujiayang12/vocaloid-jobplugin-helper/master/doc.zip)
 * 在lua文件的编辑器右键就可以看到`打开VOCALOID Job Plugin文档`的选项
 * 插件提供的文档是在Google上面找到的疑似机翻文档，但是总比日文版看的清楚就放进去了，目前也没有人翻译成中文。
@@ -127,6 +128,14 @@ end
 
 ## 开发人员
 * [白糖の正义铃](https://space.bilibili.com/180668218)：V/SV调教师、初级混音师
+
+## 更新日志
+1. 添加doc文档文件夹设置项
+2. 更新了跳转定义的文件位置
+3. 增加了音符和对话框选项的属性补全
+
+## 以后可能会做
+* API代码高亮
 
 ## 唠嗑
 * 有些API我不知道咋翻译只能凭着自己的理解去翻
