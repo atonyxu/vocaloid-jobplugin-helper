@@ -6,7 +6,7 @@
     },
     "VSUpdateControlAt": {
         "prefix": "VSUpdateControlAt",
-        "body": "VSUpdateControlAt(\"${1:controlType}\", ${2:Value}, ${3:posTick})",
+        "body": "VSUpdateControlAt(\"${1:controlType}\", ${2:posTick}, ${3:Value})",
         "description": "修改某位置参数值"
     },
     "VSSeekToBeginControl": {
